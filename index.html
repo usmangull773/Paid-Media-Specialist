@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Paid Media Brief for IGG Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F2; --surface:#FFFFFF; --ink:#1B1D20; --muted:#5D6167;
+    --line:#E5E2D9; --accent:#0F5148; --accent-soft:#EBF2F0;
+    --red:#AF3E2C; --red-bg:#FAF0ED; --red-line:#E9CDC5;
+    --green:#1E7A4F; --green-bg:#EEF6F1; --green-line:#CFE4D6;
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1150px;margin:0 auto;padding:0 28px;}
+  b,strong{font-weight:600;color:var(--ink);}
+  .serif{font-family:'Newsreader',Georgia,serif;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:34px 0 24px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px;}
+  h1{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:42px;line-height:1.14;letter-spacing:-.01em;margin-bottom:16px;}
+  h1 em{font-style:italic;color:var(--accent);}
+  .lede{color:var(--muted);font-size:16.5px;max-width:56ch;}
+  .lede b{color:var(--ink);}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .meta span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:600;color:var(--ink);}
+  .meta span.g{border-color:var(--green-line);background:var(--green-bg);color:var(--green);}
+
+  /* hero right panel */
+  .peek{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 14px;box-shadow:0 1px 0 rgba(27,29,32,.03);cursor:pointer;transition:border-color .15s ease;}
+  .peek:hover{border-color:#C9C4B6;}
+  .peek-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;}
+  .peek-kicker{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .peek h2{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:21px;margin-bottom:12px;}
+  .acct{border-top:1px solid var(--line);padding:12px 0;}
+  .acct-name{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .acct-name b{font-size:15px;}
+  .acct-name i{font-style:normal;font-size:12px;color:var(--muted);}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .chip{font-size:12px;font-weight:600;border-radius:7px;padding:3.5px 9px;display:inline-flex;align-items:center;gap:6px;}
+  .chip::before{content:"";width:6px;height:6px;border-radius:50%;flex:none;}
+  .chip.r{background:var(--red-bg);color:var(--red);border:1px solid var(--red-line);}
+  .chip.r::before{background:var(--red);}
+  .chip.g{background:var(--green-bg);color:var(--green);border:1px solid var(--green-line);}
+  .chip.g::before{background:var(--green);}
+  .peek-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-top:2px;}
+  .peek-foot small{color:var(--muted);font-size:11.5px;max-width:30ch;line-height:1.45;}
+  .peek-cta{font-size:13px;font-weight:700;color:var(--accent);white-space:nowrap;}
+
+  /* ---------- TABS ---------- */
+  .tabbar-outer{position:sticky;top:0;z-index:50;background:linear-gradient(var(--paper) 88%,rgba(247,246,242,0));padding-top:8px;}
+  .tab-cap{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 2px 7px;}
+  .tabbar{display:flex;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px;overflow-x:auto;box-shadow:0 8px 20px -16px rgba(27,29,32,.4);}
+  .tab-btn{flex:1;min-width:150px;border:0;background:transparent;font-family:'Inter',sans-serif;text-align:left;color:var(--muted);padding:10px 14px 11px;border-radius:9px;cursor:pointer;transition:all .14s ease;display:flex;flex-direction:column;gap:1px;}
+  .tab-btn .num{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--accent);}
+  .tab-btn .lab{font-size:14.5px;font-weight:600;color:var(--ink);}
+  .tab-btn .sub{font-size:11.5px;font-weight:500;color:var(--muted);}
+  .tab-btn:hover{background:var(--paper);}
+  .tab-btn.on{background:var(--ink);}
+  .tab-btn.on .num{color:#8CC7B2;}
+  .tab-btn.on .lab{color:#FFF;}
+  .tab-btn.on .sub{color:#B9B7AE;}
+  .nextrow{display:flex;justify-content:flex-end;margin-top:22px;}
+  .next-btn{border:1px solid var(--line);background:var(--surface);color:var(--accent);font-family:'Inter',sans-serif;font-size:13.5px;font-weight:700;padding:10px 20px;border-radius:999px;cursor:pointer;transition:all .14s ease;}
+  .next-btn:hover{border-color:var(--accent);background:var(--accent-soft);}
+  .panel{display:none;padding:30px 0 8px;}
+  .panel.on{display:block;animation:fade .22s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+
+  .note{font-size:13.5px;color:var(--muted);max-width:72ch;margin-bottom:22px;}
+  h3.sec{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:26px;margin-bottom:6px;}
+  .sec-sub{color:var(--muted);font-size:14.5px;margin-bottom:18px;max-width:74ch;}
+
+  /* account cards */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+  .card-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
+  .card-head .serif{font-size:22px;font-weight:500;}
+  .tagpill{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .context{font-size:14px;color:var(--muted);margin-bottom:16px;}
+  .find{border-left:3px solid;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:10px;font-size:14px;line-height:1.55;}
+  .find.r{border-color:var(--red);background:var(--red-bg);}
+  .find.g{border-color:var(--green);background:var(--green-bg);}
+  .find .tag{display:block;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px;}
+  .find.r .tag{color:var(--red);}
+  .find.g .tag{color:var(--green);}
+  .first-week{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--muted);}
+  .first-week b{color:var(--accent);}
+  .honesty{margin-top:18px;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:13px 16px;font-size:13px;color:var(--muted);}
+
+  /* stats */
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0 8px;}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 15px;}
+  .stat .n{font-family:'Newsreader',Georgia,serif;font-size:31px;font-weight:500;line-height:1.1;letter-spacing:-.01em;}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45;}
+  .stat.g{border-color:var(--green-line);background:var(--green-bg);}
+  .stat.g .n{color:var(--green);}
+  .verify{margin-top:20px;border:1px solid var(--green-line);background:var(--green-bg);border-radius:var(--radius);padding:18px 22px;display:flex;gap:14px;align-items:flex-start;}
+  .verify .dot{width:9px;height:9px;border-radius:50%;background:var(--green);margin-top:7px;flex:none;}
+  .verify p{font-size:14.5px;}
+  .between{height:26px;}
+
+  /* work cards */
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .work{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;}
+  .work .step{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+  .work h4{font-family:'Newsreader',Georgia,serif;font-size:19px;font-weight:500;margin-bottom:8px;}
+  .work p{font-size:14px;color:var(--muted);}
+  .work p b{color:var(--ink);}
+
+  /* Q&A */
+  .qa{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;margin-bottom:14px;}
+  .qa .q{font-family:'Newsreader',Georgia,serif;font-size:18.5px;font-weight:500;margin-bottom:8px;}
+  .qa .a{font-size:14.5px;color:var(--muted);}
+  .qa .a b{color:var(--ink);}
+
+  /* footer band */
+  .band{margin-top:36px;background:var(--ink);border-radius:var(--radius) var(--radius) 0 0;color:#EDEBE4;padding:30px 34px;}
+  .band-grid{display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center;}
+  .band h5{font-family:'Newsreader',Georgia,serif;font-size:22px;font-weight:500;color:#FFF;margin-bottom:8px;}
+  .band p{font-size:14px;color:#B9B7AE;}
+  .band p b{color:#FFF;font-weight:600;}
+  .band .who{text-align:right;font-size:13.5px;color:#B9B7AE;}
+  .band .who b{display:block;color:#FFF;font-size:16px;font-family:'Newsreader',Georgia,serif;font-weight:500;}
+  .band .who span{color:#7FBFA9;}
+
+  @media(max-width:900px){
+    .hero-grid,.two-col,.work-grid,.band-grid{grid-template-columns:1fr;}
+    .stat-row{grid-template-columns:repeat(2,1fr);}
+    h1{font-size:33px;}
+    .band .who{text-align:left;}
+    .hero{padding-top:30px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="kicker">Prepared for IGG Marketing</div>
+      <h1>A working brief for your <em>paid media</em> seat.</h1>
+      <p class="lede">You are hiring one person to manage, optimize and <b>audit e-commerce campaigns</b> across Google, Meta and Instagram. This page is how I actually think about that job. Before writing a word of it, I looked at <b>two of the brands on your client list</b>, because asking for your time without doing any work first did not sit right with me.</p>
+      <div class="meta">
+        <span>Usman Gull</span>
+        <span>Over a decade in paid media</span>
+        <span>$15.5M managed on one e-commerce account</span>
+        <span class="g">Top Rated Plus on Upwork · 100% JSS</span>
+      </div>
+    </div>
+
+    <div class="peek" onclick="openTab(0)" title="Open the full notes">
+      <div class="peek-top"><span class="peek-kicker">Checked before applying</span></div>
+      <h2>Two of your accounts, from the outside</h2>
+
+      <div class="acct">
+        <div class="acct-name"><b>cbdMD</b><i>CBD e-commerce</i></div>
+        <div class="chips">
+          <span class="chip r">3 separate GA4 properties</span>
+          <span class="chip r">Meta pixel silent on first visit</span>
+          <span class="chip g">Klaviyo + Clarity in place</span>
+        </div>
+      </div>
+
+      <div class="acct">
+        <div class="acct-name"><b>Wolf Mattress</b><i>DTC e-commerce</i></div>
+        <div class="chips">
+          <span class="chip r">Only branded search visible</span>
+          <span class="chip r">No Ads conversion tag in sight</span>
+          <span class="chip g">Clean GTM foundation</span>
+        </div>
+      </div>
+
+      <div class="peek-foot">
+        <small>Outside view only. No account access used, and nothing here is dressed up as more than it is.</small>
+        <span class="peek-cta">Read the notes &rarr;</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap tabbar-outer">
+  <div class="tab-cap">This brief has four short parts</div>
+  <nav class="tabbar" role="tablist">
+    <button class="tab-btn on" onclick="openTab(0)" role="tab"><span class="num">Part 1</span><span class="lab">Two of your accounts</span><span class="sub">what I noticed from the outside</span></button>
+    <button class="tab-btn" onclick="openTab(1)" role="tab"><span class="num">Part 2</span><span class="lab">Track record</span><span class="sub">the numbers, and how to verify them</span></button>
+    <button class="tab-btn" onclick="openTab(2)" role="tab"><span class="num">Part 3</span><span class="lab">How I would work</span><span class="sub">audit first, then a steady rhythm</span></button>
+    <button class="tab-btn" onclick="openTab(3)" role="tab"><span class="num">Part 4</span><span class="lab">Your three questions</span><span class="sub">answered straight</span></button>
+  </nav>
+</div>
+
+<main class="wrap">
+
+  <!-- TAB 1 -->
+  <section class="panel on" id="p0">
+    <h3 class="sec">What I noticed, and what I would do about it</h3>
+    <p class="sec-sub">These are outside-in observations. I can only see part of the picture from here, and the honest use of that is to show you <b>how I look at an account</b>, not to pretend I know what is inside yours.</p>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head"><span class="serif">cbdMD</span><span class="tagpill">CBD · Wellness</span></div>
+        <p class="context">CBD is a <b>restricted category</b> on both Google and Meta. That one fact shapes everything about how this account should be run, and it is where generic e-commerce playbooks quietly fall apart.</p>
+        <div class="find r"><span class="tag">Worth a look</span><b>Three separate GA4 properties</b> load on the storefront. Three properties usually means three versions of the truth. If reporting on this account ever feels slightly off, this is the first place I would check.</div>
+        <div class="find r"><span class="tag">Worth a look</span>The <b>Meta pixel stayed silent</b> on my first visit. That could be consent settings doing their job, or it could be a gap. Either way, it decides whether Meta is running on a full signal or a partial one.</div>
+        <div class="find g"><span class="tag">Working for you</span><b>Klaviyo and Microsoft Clarity are in place.</b> Retention and behavior data exist here, which is more than most CBD brands ever set up properly.</div>
+        <p class="first-week"><b>With access, week one goes to measurement:</b> one source of truth in GA4, pixel and consent behavior verified event by event, and only then the restricted-category paid plan on top of clean data.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="serif">Wolf Mattress</span><span class="tagpill">DTC · Home</span></div>
+        <p class="context">An American mattress maker with roots back to <b>1873</b> is a story most paid accounts would kill for. From the outside, paid media barely seems to use it.</p>
+        <div class="find r"><span class="tag">Worth a look</span>The only search ad I could find is a <b>branded one</b>. Branded clicks mostly harvest demand the brand already earned. The growth lives in <b>non-branded search and Shopping</b>, and that lane looks quiet.</div>
+        <div class="find r"><span class="tag">Worth a look</span>I did not see a <b>Google Ads conversion tag</b> or a Meta pixel on a first visit. If that holds up inside the account, any spend is being optimized on incomplete signals.</div>
+        <div class="find g"><span class="tag">Working for you</span><b>GTM is installed and GA4 is a single, clean property.</b> Someone laid a decent foundation, which makes fixing the rest faster.</div>
+        <p class="first-week"><b>With access, week one:</b> confirm what the conversion tags actually record, then map the non-branded and Shopping opportunity against margin, not against vanity ROAS.</p>
+      </div>
+    </div>
+
+    <p class="honesty">Everything above is visible from outside the accounts. Where I could not verify something, I flagged it as a question instead of dressing a guess up as a finding. You would get the same honesty about your clients' accounts every week.</p>
+    <div class="nextrow"><button class="next-btn" onclick="openTab(1)">Part 2: Track record &rarr;</button></div>
+  </section>
+
+  <!-- TAB 2 -->
+  <section class="panel" id="p1">
+    <h3 class="sec">The e-commerce years</h3>
+    <p class="sec-sub">One account, held for over a decade, across Search, Shopping, Performance Max, Display and video. Holding an account that long teaches you what a hundred short audits never will: how seasons behave, how feeds rot quietly, and how a good account slowly goes bad when nobody is measuring properly.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">$15.5M</div><div class="l">Ad spend managed, 2011 to 2023</div></div>
+      <div class="stat"><div class="n">977</div><div class="l">Campaigns built and run</div></div>
+      <div class="stat"><div class="n">$5.6M</div><div class="l">Tracked Shopify revenue in 2022 alone</div></div>
+      <div class="stat"><div class="n">4.8B</div><div class="l">Impressions across the account's life</div></div>
+    </div>
+
+    <div class="between"></div>
+
+    <h3 class="sec">The current book</h3>
+    <p class="sec-sub">Today I manage a book of healthcare and service accounts in the UK. Different vertical, same mechanics that decide e-commerce outcomes: <b>conversion integrity, negative discipline, budget pacing, reporting people can trust.</b> A few numbers from last month's dashboards:</p>
+    <div class="stat-row">
+      <div class="stat g"><div class="n">259</div><div class="l">Tracked phone leads in one month, dental account</div></div>
+      <div class="stat g"><div class="n">£42</div><div class="l">Cost per conversion at 212 conversions, clinic account</div></div>
+      <div class="stat g"><div class="n">9.2x</div><div class="l">Return on ad spend, aesthetics account</div></div>
+      <div class="stat g"><div class="n">71%</div><div class="l">Cost per lead cut in one month, laser clinic</div></div>
+    </div>
+
+    <div class="verify">
+      <span class="dot"></span>
+      <p><b>Every number on this page is dashboard-sourced.</b> The accounts I run today I can open live on a screen share: pick any current figure and I will show you the screen it comes from. I do not send numbers that cannot be questioned, and I would never let your clients receive any either.</p>
+    </div>
+    <div class="nextrow"><button class="next-btn" onclick="openTab(2)">Part 3: How I would work &rarr;</button></div>
+  </section>
+
+  <!-- TAB 3 -->
+  <section class="panel" id="p2">
+    <h3 class="sec">How I would run your seat</h3>
+    <p class="sec-sub">You run the client relationships. My job is to make sure the work behind them is something you never have to worry about, or chase.</p>
+    <div class="work-grid">
+      <div class="work"><div class="step">Weeks 1 and 2</div><h4>Audit before touching anything</h4><p>A quiet pass over whichever accounts you hand me. One page per account: what is working, <b>where money is leaking</b>, and what I would change first and why. You decide what gets touched. Nothing moves without your sign-off.</p></div>
+      <div class="work"><div class="step">Ongoing</div><h4>A rhythm, not heroics</h4><p>Changes logged so anyone can see what was done and why. Testing that follows a plan instead of moods. Budgets paced daily. When a platform shifts its rules, you hear it from me <b>before your client asks about it</b>.</p></div>
+      <div class="work"><div class="step">Reporting</div><h4>Written to be forwarded</h4><p>Reports clear enough that you can send them to your client <b>without rewriting a line</b>. What happened, why it happened, what I am doing about it. No vanity metrics, no padding, no surprises saved for the call.</p></div>
+      <div class="work"><div class="step">Working style</div><h4>One person, no hand-holding</h4><p>Your post says you want to hire a person, not an agency. That suits me, because that is what I am. I work alone, I bring recommendations before being asked, I overlap with <b>US working hours</b>, and the 30-plus hours a week is genuinely available.</p></div>
+    </div>
+    <div class="nextrow"><button class="next-btn" onclick="openTab(3)">Part 4: Your three questions &rarr;</button></div>
+  </section>
+
+  <!-- TAB 4 -->
+  <section class="panel" id="p3">
+    <h3 class="sec">The three questions from your post</h3>
+    <p class="sec-sub">Short versions here, straight answers. Happy to go deeper on any of them.</p>
+    <div class="qa">
+      <div class="q">What verticals have you worked in?</div>
+      <div class="a"><b>E-commerce first:</b> over a decade on one Shopify account across Search, Shopping, Performance Max, Display and video. Alongside that: healthcare, dental, aesthetics, women's health, behavioural health and local services. The mix matters more than it looks. E-commerce taught me feeds and ROAS discipline; healthcare taught me tracking rigor and <b>restricted-category rules</b>, which is exactly what a brand like cbdMD lives under.</div>
+    </div>
+    <div class="qa">
+      <div class="q">How many years have you been managing accounts?</div>
+      <div class="a"><b>Over a decade, hands-on.</b> Not overseeing other people's work, not reviewing decks. Building campaigns, fixing tracking, cutting waste, and answering for the results, month after month, in the accounts myself.</div>
+    </div>
+    <div class="qa">
+      <div class="q">What size budgets have you managed?</div>
+      <div class="a">From a few hundred dollars a month on lean local accounts to an e-commerce account that spent <b>$15.5M over a decade</b>. The size changes the stakes, not the discipline. The same waste hides in a $2K month and a $200K month, it just has more zeros on it.</div>
+    </div>
+  </section>
+
+</main>
+
+<div class="wrap">
+  <footer class="band">
+    <div class="band-grid">
+      <div>
+        <h5>Test how I think before you commit to anything.</h5>
+        <p>Pick one of your e-commerce accounts and give me read-only access. Within <b>24 hours</b> I will present what I found and what I would do about it. If none of it is useful, it has cost you nothing, and you keep the audit.</p>
+      </div>
+      <div class="who">
+        <b>Usman Gull</b>
+        Paid Media &amp; Google Ads Specialist<br>
+        <span>usmangullpro.com</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  function openTab(i){
+    document.querySelectorAll('.tab-btn').forEach((b,j)=>b.classList.toggle('on', j===i));
+    document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('on', j===i));
+    var bar = document.querySelector('.tabbar-outer');
+    var y = bar.getBoundingClientRect().top + window.scrollY - 8;
+    if(window.scrollY > y){ window.scrollTo({top:y, behavior:'smooth'}); }
+  }
+</script>
+</body>
+</html>
